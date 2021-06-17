@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+    <style>
+        body{
+            font-size: 17px;
+            font-family: arial;
+            background: #f4f4f4;
+            line-height: 1.5em;
+        }
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JQuery course</h1>
+    </header>
+
+    <div id="container">
+        <h1 id="heading1">heading one</h1>
+        <p id="para1" >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sint autem quos est! Dolorem, animi deserunt odio dicta nostrum <span>aliquam debitis illo explicabo vero reprehenderit.</span> Officia dicta nisi expedita.
+        </p>
+
+        <h1 class="heading2">heading one</h1>
+        <p id="para2" >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit blanditiis sint autem quos est! Dolorem, animi deserunt odio dicta nostrum <span>aliquam debitis illo explicabo vero reprehenderit.</span> Officia dicta nisi expedita.
+        </p>
+
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+
+        <ul class="" id="list">
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+
+        <input type="button" value="Button 1">
+        <input type="submit" value="Button 2">
+        <input type="text">
+
+
+        <a href="google.com">google</a>
+    </div>
+
+    <script>
+
+        //Selecting element with ID
+        $('h1#heading1').hide();
+        
+        // Selecting classes
+        $('.heading2').hide();
+
+        $('p span').css('color', 'red');
+
+        //Selecting element first and last li of the list with the ID list
+        $('ul#list li:first').css('color', 'red');
+        $('ul#list li:last').css('color', 'blue');
+
+
+        //Selecting element evens and odds li of the list with the ID list
+        $('ul#list li:even').css('background-color', 'yellow');
+        $('ul#list li:odd').css('background-color', 'gray');
+
+        $('ul#list li:nth-child(3n)').css('list-style', 'none');
+
+        //
+        $(':submit').hide();
+
+        $('[href]').css('color', 'green');
+
+        var inp = $('input:submit').values();
+
+        console.log(inp)
+
+        
+
+    </script>
+
+</body>
+</html>
